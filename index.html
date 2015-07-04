@@ -1,0 +1,25 @@
+<html lang="ja-jp">
+    <head>
+        <meta charset="UTF-8" />
+        <title>test</title>
+    </head>
+    <body>
+    <script type="text/javascript">
+    function Rectangle(width, height) {
+        this.width = width;
+        this.height = height;
+    }
+    Rectangle.prototype.getSquare = function() {
+        return this.width * this.height;
+    };
+    function ColorRectangle(width, height, color) {
+        this.color = color;
+        Rectangle.apply(this, [width, height]);
+    }
+    ColorRectangle.prototype = new Rectangle();
+    ColorRectangle.prototype.constructor = ColorRectangle;
+    var colors = new ColorRectangle(8, 7, 'blue');
+    alert(colors.getSquare());
+;    </script>
+    </body>
+</html>

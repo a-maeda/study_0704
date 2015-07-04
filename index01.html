@@ -1,0 +1,19 @@
+<html lang="ja-jp">
+    <head>
+        <meta charset="UTF-8" />
+        <title>サンプル</title>
+    <script src="jp.leanyourself.js"></script>
+    <script>
+    function test() {
+        var sa = new jp.learnyourself.SlashStringSplitter('aaa/bbb/ccc/ddd');
+        var temp = sa.getNext();
+        while (temp != null) {
+            document.write(temp + '<br>');
+            temp = sa.getNext();
+        }
+    }
+    </script>
+    </head>
+    <body onload="test();">
+    </body>
+</html>

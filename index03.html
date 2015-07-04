@@ -1,0 +1,29 @@
+<html lang="ja-jp">
+    <head>
+        <meta charset="UTF-8" />
+        <title>test</title>
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <ul id="languages">
+            <li>Java</li>
+            <li>JavaScript</li>
+            <li>PHP</li>
+        </ul>
+    <script type="text/javascript">
+    function getElement(unko){
+        var ul = document.getElementById('languages');
+        var li = ul.getElementsByTagName('li');
+        for(var i = 0; i < li.length; i++){
+            if(li[i].innerHTML.replace(/^\s+|\s+$/g, '') == unko){
+                return li[i];
+            }
+        }
+    }
+    alert(getElement(3));
+    </script>
+
+    </body>
+
+</html>
